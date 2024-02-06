@@ -4,6 +4,8 @@ import { updateMenuTools } from '@/store/slice';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import SearchParcel from './SerchParcel';
+import './SerchParcel'; // Importa tus estilos CSS
+
 
 const Tools = () => {
 
@@ -179,10 +181,7 @@ const Tools = () => {
           Info
           <div className="tooltip-arrow" data-popper-arrow></div>
         </div>
-
       </div>
-
-
 
 
       <button
@@ -204,5 +203,3 @@ const Tools = () => {
   )
 }
 export default Tools;
-
-

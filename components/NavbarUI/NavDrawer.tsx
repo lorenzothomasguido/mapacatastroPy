@@ -15,6 +15,7 @@ import Avatar from '@mui/material/Avatar';
 import { blueGrey } from '@mui/material/colors';
 import { useSelector } from 'react-redux';
 import { makeStyles } from '@mui/material/styles';
+import SerchParcel from '../Tools/SerchParcel';
  // Importa el archivo de estilos CSS
 
 
@@ -146,12 +147,18 @@ export default function NavDrawer() {
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
-
+          Filtros {menuActive}
         </DrawerHeader>
 
+        {/* Integra tu componente SerchParcel aquí */}
+        <SerchParcel />
       </Drawer>
+
+      {/* Ajusta el Main para dejar espacio para el Drawer */}
+      <Main open={open}>
+        <DrawerHeader className="drawer-header" />
+        {/* ... (resto del contenido de tu aplicación) */}
+      </Main>
     </Box>
   );
 }
-
-
